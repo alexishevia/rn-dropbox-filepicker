@@ -5,6 +5,14 @@
   "main": "lib/index.js",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "license": "ISC",
+  "dependencies": {
+    "dropbox": "^4.0.30"
+  },
+  "peerDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.60.5",
+    "react-native-paper": "^2.16.0"
+  },
   "devDependencies": {
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -17,15 +25,12 @@
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "lint-staged": "^9.2.5",
-    "prettier": "^1.18.2",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "lint": "eslint src/**/*.js",
     "test": "jest",
-    "test-debug": "node --inspect-brk=0.0.0.0:9229 ./node_modules/.bin/jest",
-    "build": "webpack --entry ./src/index.js -o ./lib/index.js --devtool source-map --mode production --output-library-target commonjs-module"
+    "test-debug": "node --inspect-brk=0.0.0.0:9229 ./node_modules/.bin/jest"
   },
   "husky": {
     "hooks": {
