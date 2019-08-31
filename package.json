@@ -1,6 +1,6 @@
 {
   "name": "rn-dropbox-filepicker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Native Component to select a Dropbox file.",
   "main": "lib/FilePicker.js",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
@@ -28,7 +28,7 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint lib/**/*.js",
     "test": "jest",
     "test-debug": "node --inspect-brk=0.0.0.0:9229 ./node_modules/.bin/jest"
   },
