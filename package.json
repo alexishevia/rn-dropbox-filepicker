@@ -1,14 +1,15 @@
 {
   "name": "rn-dropbox-filepicker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React Native Component to select a Dropbox file.",
-  "main": "lib/FilePicker.js",
+  "main": "lib/index.js",
   "author": "Alexis Hevia <hevia.alexis@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "dropbox": "^4.0.30"
   },
   "peerDependencies": {
+    "expo": "^33.0.0",
     "react": "^16.9.0",
     "react-native": "^0.60.5",
     "react-native-paper": "^2.16.0"
