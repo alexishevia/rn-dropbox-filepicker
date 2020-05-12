@@ -36,10 +36,10 @@ class YourComponent extends React.Component {
             appKey={APP_KEY}
             accessToken={accessToken}
             filepath={filepath}
-            onLogin={accessToken => this.setState({ accessToken });}
-            onLogout={() => this.setState({ accessToken: null, filepath: null });}
-            onFilePick={filepath => this.setState({ filepath });}
-            onError={error => console.error(error.message);}
+            onLogin={accessToken => this.setState({ accessToken })}
+            onLogout={() => this.setState({ accessToken: null, filepath: null })}
+            onFilePick={filepath => this.setState({ filepath })}
+            onError={error => console.error(error.message)}
           />
         </View>
       </Portal.Host>
