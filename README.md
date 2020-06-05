@@ -40,6 +40,9 @@ class YourComponent extends React.Component {
             onLogout={() => this.setState({ accessToken: null, filepath: null })}
             onFilePick={filepath => this.setState({ filepath })}
             onError={error => console.error(error.message)}
+            loggedInMsg={loggedInMsg}
+            loggedOutMsg={loggedOutMsg}
+            fileSelectedMsg={fileSelectedMsg}
           />
         </View>
       </Portal.Host>
@@ -66,3 +69,12 @@ The FilePicker accepts the following arguments:
   Executed when the user selects a file.
 - `onError()`
   Executed when an unexpected error happens.
+- `loggedOutMsg`
+  Alternative text at the logged-out-screen
+  (default: "You can connect to Dropbox to backup/sync your transactions.")
+- `loggedInMsg`
+  Alternative text at the logged-in-screen
+  (default: "You are connected to Dropbox, but you still need to select a file to use for sync.")
+- `fileSelectedMsg`
+  Alternative text at the file-selected-screen
+  (default: "You are connected to Dropbox and syncing to file:")
