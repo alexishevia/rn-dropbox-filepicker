@@ -7,6 +7,8 @@ This project assumes:
 1. You are building a React Native application using [Expo](https://docs.expo.io/versions/latest/).
 2. You need your users to connect to Dropbox and select a file.
 
+NOTE: this package was developed against Expo version 33.0. It might not work with latest Expo versions.
+
 ## How to Use
 
 1. `npm install --save react react-native expo react-native-paper rn-dropbox-filepicker`
@@ -40,9 +42,6 @@ class YourComponent extends React.Component {
             onLogout={() => this.setState({ accessToken: null, filepath: null })}
             onFilePick={filepath => this.setState({ filepath })}
             onError={error => console.error(error.message)}
-            loggedInMsg={loggedInMsg}
-            loggedOutMsg={loggedOutMsg}
-            fileSelectedMsg={fileSelectedMsg}
           />
         </View>
       </Portal.Host>
@@ -78,3 +77,6 @@ The FilePicker accepts the following arguments:
 - `fileSelectedMsg`
   Alternative text at the file-selected-screen
   (default: "You are connected to Dropbox and syncing to file:")
+- `fileChangeWarningMsg`
+  Alternative text for "change file" prompt.
+  (default: "If you change the sync file, all local data will be discarded, and data from the new file will be loaded.\n\nAre you sure you want to change the sync file?")
